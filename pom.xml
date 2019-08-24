@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.vkstech</groupId>
-    <artifactId>auhorization-server</artifactId>
+    <artifactId>authorization-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>Auhorization-Server</name>
+    <name>Authorization-Server</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
