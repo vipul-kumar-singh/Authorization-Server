@@ -1,4 +1,5 @@
 # Spring Security 1 of 2 : Authorization-Server
+## For Spring Security 2 of 2 : Resource-Server - https://github.com/vipul-kumar-singh/Resource-Server
 
 #### _Steps To Run_
 
