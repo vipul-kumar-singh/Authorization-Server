@@ -9,9 +9,9 @@ import java.util.Date;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ResponseObject implements Serializable {
 
-    public Date timestamp;
-    public Object data;
-    public String message;
+    private Date timestamp;
+    private Object data;
+    private String message;
 
     public ResponseObject() {
         this.timestamp = new Date();
@@ -26,6 +26,14 @@ public class ResponseObject implements Serializable {
         this.message = message;
         this.data = data;
         this.timestamp = new Date();
+    }
+
+    public Date getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(Date timestamp) {
+        this.timestamp = timestamp;
     }
 
     public String getMessage() {
