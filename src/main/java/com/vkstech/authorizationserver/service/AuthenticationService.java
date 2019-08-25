@@ -90,8 +90,12 @@ public class AuthenticationService {
     public ResponseEntity login(LoginForm loginForm, HttpServletRequest request) {
         LOGGER.info("AuthenticationService login...");
 
-        //check is username exists
-        User user = (User) userDetailService.loadUserByUsername(loginForm.getUsername());
+        //check is username already exists
+        User user = userRepository.findByUsername(loginForm.getUsername());
+        if (user == null) {
+            LOGGER.error(ResponseMessages.USERNAME_EXISTS);
+            return new ResponseEntity(new ResponseObject(ResponseMessages.USERNAME_NOT_EXISTS), HttpStatus.BAD_REQUEST);
+        }
 
         //verify password
         if (!passwordEncoder.matches(loginForm.getPassword(), user.getPassword())) {

@@ -13,4 +13,5 @@ public interface ResponseMessages {
     String INVALID_TOKEN = "Invalid access token";
     String LOGOUT_SUCCESS = "Logout successful";
     String LOGOUT_FAILURE = "Logout failed";
+    String USERNAME_NOT_EXISTS = "Username does not exist";
 }
