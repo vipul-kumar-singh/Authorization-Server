@@ -8,7 +8,7 @@ public class LoginForm {
 
     @NotNull(message = "username cannot be null")
     @NotBlank(message = "username cannot be blank")
-    @NotEmpty(message = "username cannot be null")
+    @NotEmpty(message = "username cannot be empty")
     private String username;
 
     @NotNull(message = "password cannot be null")

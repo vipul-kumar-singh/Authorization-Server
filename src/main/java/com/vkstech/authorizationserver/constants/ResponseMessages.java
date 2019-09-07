@@ -14,4 +14,5 @@ public interface ResponseMessages {
     String LOGOUT_SUCCESS = "Logout successful";
     String LOGOUT_FAILURE = "Logout failed";
     String USERNAME_NOT_EXISTS = "Username does not exist";
+    String INVALID_USERNAME = "Invalid Username";
 }

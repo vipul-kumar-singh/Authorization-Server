@@ -1,5 +1,6 @@
 package com.vkstech.authorizationserver.service;
 
+import com.vkstech.authorizationserver.constants.ResponseMessages;
 import com.vkstech.authorizationserver.model.AuthUserDetail;
 import com.vkstech.authorizationserver.model.User;
 import com.vkstech.authorizationserver.repository.UserRepository;
@@ -22,7 +23,7 @@ public class UserDetailServiceImpl implements UserDetailsService {
         User user = userRepository.findByUsername(username);
 
         if (user == null)
-            throw new UsernameNotFoundException("Invalid Username");
+            throw new UsernameNotFoundException(ResponseMessages.INVALID_USERNAME);
 
         UserDetails userDetails = new AuthUserDetail(user);
 

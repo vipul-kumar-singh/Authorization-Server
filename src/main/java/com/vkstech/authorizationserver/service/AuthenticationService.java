@@ -118,8 +118,8 @@ public class AuthenticationService {
         LOGGER.info("AuthenticationService logout...");
 
         if (!accessTokenService.removeAccessToken(request))
-            return new ResponseEntity(new ResponseObject("Invalid access token"), HttpStatus.UNAUTHORIZED);
+            return new ResponseEntity(new ResponseObject(ResponseMessages.INVALID_TOKEN), HttpStatus.UNAUTHORIZED);
 
-        return new ResponseEntity(new ResponseObject("Logout successful"), HttpStatus.OK);
+        return new ResponseEntity(new ResponseObject(ResponseMessages.LOGOUT_SUCCESS), HttpStatus.OK);
     }
 }
